@@ -2,7 +2,7 @@ function handleInput() {
     const inputfield = document.getElementById('inputfield');
     
     const pretendNumber = Number(inputfield.value);
-    if (Number.isNaN(pretendNumber) || pretendNumber <= 0) {
+    if (pretendNumber <= 1) {
         formatOutput(pretendNumber, 'an invalid')
         return;
     }
@@ -24,8 +24,7 @@ function isPrime(pretendNumber) {
     for (let i = 2; Math.pow(i, 2) <= pretendNumber; i++) {
         if (pretendNumber % i == 0) {
             return false;
-        }
-        console.log('item'); 
+        } 
     }
-    return pretendNumber === 1 ? false : true;
+    return true;
 }
